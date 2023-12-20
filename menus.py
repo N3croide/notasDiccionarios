@@ -16,3 +16,4 @@ def menuNotas() -> int:
         return int(input("Seleccione una opcion: "))
     except ValueError:
         print("Seleccione un valor valido del menu")
+    

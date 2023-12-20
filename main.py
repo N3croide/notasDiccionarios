@@ -34,21 +34,21 @@ while(isActive):
                     opNotas = menu.menuNotas()
                     if opNotas in [1,2,3]:
                         notas.ingresarNotas(opNotas, estudiante)
-                    elif( opNotas == (4 or 5)):
+                    elif( opNotas in [4,5]):
                         ingresarMasNotas = False  
                     else:
                         print("Ingrese una opcion valida.")
             else:
                 otroEstudiante = "n"
-        if (opNotas == 5):
-            break
+            if (opNotas == 5):
+                break
     #Buscar Estudiante
     elif(opMenu == 3):
-        al.buscarAlumno(alumnos)
+        print(al.buscarAlumno(alumnos))
         
     #Mostrar Notas
     elif(opMenu == 4):
-        isActive = False
+        notas.mostrarNotas(alumnos)
 
     #Salir
     elif(opMenu == 5):

@@ -9,7 +9,7 @@ def regAlumno() -> dict:
     alumno = {
         "codigo" : codigo,
         "nombre" : nombre,
-        "edad" : edad,
+        "edad  " : edad,
         "notas" : {
             "parciales" : [],
             "quices" : [],
