@@ -1,10 +1,10 @@
 import alumnos as al
 import menus as menu
-import notasV2 as notas
+import notas as notas
 import os
 
 pausa = lambda : input("\nPresione enter para continuar....")
-borrarPantalla = lambda : os.system("cls") 
+borrarPantalla = lambda : os.system("clear") 
 alumnos = {}
 isActive = True
 opMenu = 0
@@ -18,7 +18,6 @@ while(isActive):
         while(registrarOtroEstudiante in ["S","s"]):
             borrarPantalla()
             alumnos.update(al.regAlumno())
-            print(alumnos)
             pausa()
             registrarOtroEstudiante = input("Desea registrar otro estudiante?. S(si) o N(no)")
 
@@ -46,7 +45,6 @@ while(isActive):
     #Buscar Estudiante
     elif(opMenu == 3):
         al.buscarAlumno(alumnos)
-        pausa()
         
     #Mostrar Notas
     elif(opMenu == 4):

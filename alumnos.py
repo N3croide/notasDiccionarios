@@ -1,6 +1,6 @@
 import os
 pausa = lambda : input("\nPresione enter para continuar...")
-borrarPantalla = lambda : os.system("cls")
+borrarPantalla = lambda : os.system("clear")
 
 def regAlumno() -> dict:
     codigo = input("Ingrese el codigo del estudiante: ")
@@ -16,7 +16,9 @@ def regAlumno() -> dict:
             "trabajos" : []
         }
     }
-    return {codigo: alumno}
+    alumnoRegistrado = {codigo: alumno}
+    print(alumnoRegistrado)
+    return alumnoRegistrado
 
 def buscarAlumno(alumnos : dict) -> dict:
     codAlumno = input("Ingrese el codigo del alumno: ")
